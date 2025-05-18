@@ -1,0 +1,5 @@
+@echo off
+set webhook=https://discord.com/api/webhooks/your_webhook_url_here
+set message=Hello from a batch file!
+
+powershell -Command "Invoke-RestMethod -Uri '%webhook%' -Method Post -ContentType 'application/json' -Body '{\"content\": \"%message%\"}'"
